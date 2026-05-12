@@ -315,6 +315,9 @@
     <div class="checkbox-group">
       <input type="checkbox" id="remember_check" name="remember" {{ old('remember') ? 'checked' : '' }}>
       <label for="remember_check">Recordarme</label>
+      <div class="text-right mt-1 ">
+          <a href="{{ route('register') }}" class="forgot-link">¿No tienes cuenta?</a>
+        </div>
     </div>
 
     <!-- Botón INGRESAR -->
