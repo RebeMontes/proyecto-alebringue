@@ -29,8 +29,9 @@
                     {{ __('Documentation') }}
                 </flux:sidebar.item>
             </flux:sidebar.nav>
-
+            @if(auth()->check())
             <x-desktop-user-menu class="hidden lg:block" :name="auth()->user()->name" />
+            @endif
         </flux:sidebar>
 
         <!-- Mobile User Menu -->
@@ -38,12 +39,13 @@
             <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
 
             <flux:spacer />
-
+            @auth
             <flux:dropdown position="top" align="end">
                 <flux:profile
                     :initials="auth()->user()->initials()"
                     icon-trailing="chevron-down"
                 />
+                @endauth
 
                 <flux:menu>
                     <flux:menu.radio.group>
