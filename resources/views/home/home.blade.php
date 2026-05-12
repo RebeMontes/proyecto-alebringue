@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alebringue | Domina tu pronunciación de inglés</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..28,300;12..28,400;12..28,500;12..28,600;12..28,700;12..28,800&family=Bungee&display=swap" rel="stylesheet">
     <!-- TailwindCSS v3 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,8 +23,21 @@
     <style>
         /* Fondo degradado morado */
         .bg-gradient-purple {
-            background: linear-gradient(135deg, #6B46C1 0%, #44337A 50%, #2D1B4E 100%);
+            background: linear-gradient(135deg, #c2006b 0%, #b535b5 50%, #c2006b 100%);
         }
+
+        .brand-name {
+      font-family: 'Bungee', cursive;
+      font-size: 5.2rem;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #ffffff 70%, #ffffff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-bottom: 0.35rem;
+    }
     </style>
 </head>
 <body class="bg-gradient-purple min-h-screen">
@@ -35,11 +49,11 @@
         <header class="bg-black border-b border-gray-800">
             <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <!-- Logo (solo texto, sin el recuadro) -->
-                <span class="font-bold text-2xl text-white tracking-tight">ALEBRINGÜE</span>
+                <span class="font-Bungee text-2xl text-white tracking-tight">ALEBRINGÜE</span>
 
                 <!-- Menú navegación escritorio -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#" class="text-white hover:text-gray-300 transition-colors">inicio</a>
+                    <!-- <a href="#" class="text-white hover:text-gray-300 transition-colors">inicio</a>
                     <a href="#" class="text-white hover:text-gray-300 transition-colors">características</a>
                     <div class="flex items-center gap-1 text-white">
                         <span>niveles</span>
@@ -53,8 +67,9 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
-                    </div>
-                    <a href="#" class="bg-white text-black px-5 py-2 rounded-full font-semibold text-sm hover:bg-gray-200 transition-all ml-2">iniciar sesión</a>
+                    </div> -->
+                    <a href="{{ route('login') }}" class="bg-white text-black px-5 py-2 rounded-full font-semibold text-sm hover:bg-gray-200 transition-all ml-2">Inicar Sesion</a>
+                    <a href="#" class="bg-white text-black px-5 py-2 rounded-full font-semibold text-sm hover:bg-gray-200 transition-all ml-2">Descargar app</a>
                 </nav>
 
                 <!-- Botón menú móvil hamburguesa -->
@@ -80,7 +95,7 @@
         <main class="flex-grow flex items-center justify-center">
             <div class="max-w-4xl mx-auto px-6 py-16 md:py-20 text-center">
                 <!-- Título ALEBRINGUE -->
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-white">
+                <h1 class="brand-name">
                     ALEBRINGÜE
                 </h1>
                 
